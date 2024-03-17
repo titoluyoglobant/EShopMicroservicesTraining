@@ -11,14 +11,14 @@ public class GetProductsEndpoint : ICarterModule
             {
                 var result = await sender.Send(new GetProductsQuery());
 
-                var response = result.Adapt<GetProductsResponse>();
+            var response = result.Adapt<GetProductsResponse>();
 
-                return Results.Ok(response);
-            })
-            .WithName("GetProducts")
-            .Produces<GetProductsResponse>(StatusCodes.Status200OK)
-            .ProducesProblem(StatusCodes.Status400BadRequest)
-            .WithSummary("Get Products")
-            .WithDescription("Get Products");
+            return Results.Ok(response);
+        })
+        .WithName("GetProducts")
+        .Produces<GetProductsResponse>(StatusCodes.Status200OK)
+        .ProducesProblem(StatusCodes.Status400BadRequest)
+        .WithSummary("Get Products")
+        .WithDescription("Get Products");
     }
 }
