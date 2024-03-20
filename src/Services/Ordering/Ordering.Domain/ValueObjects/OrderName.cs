@@ -10,6 +10,7 @@ public record OrderName
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(value);
         ArgumentOutOfRangeException.ThrowIfNotEqual(value.Length, DefaultLength);
+
         return new OrderName(value);
     }
 }

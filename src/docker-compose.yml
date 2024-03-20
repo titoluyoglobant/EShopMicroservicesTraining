@@ -10,6 +10,9 @@ services:
   distributedcache:
     image: redis
 
+  orderdb:
+    image: mcr.microsoft.com/mssql/server
+
   pgadmin:
     image: dpage/pgadmin4
     container_name: pgadmin
