@@ -6,7 +6,7 @@ public class OrderCreatedEventHandler
 {
     public Task Handle(OrderCreatedEvent notification, CancellationToken cancellationToken)
     {
-        logger.LogInformation("Domain Event handled : {DomainEvent}", notification.GetType().Name);
+        logger.LogInformation("[EVENT HANDLE] Domain Event handled : {DomainEvent}", notification.GetType().Name);
         return Task.CompletedTask;
     }
 }

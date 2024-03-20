@@ -10,11 +10,14 @@ public class GetOrdersHandler
     {
         // get orders with pagination
         // return result
-        
-        var pageIndex = query.PaginationRequest.PageSize;
+
+        var pageIndex = query.PaginationRequest.PageIndex;
         var pageSize = query.PaginationRequest.PageSize;
 
         var totalCount = await dbContext.Orders.LongCountAsync(cancellationToken);
+
+        var orders2 = await dbContext.Orders.ToListAsync(cancellationToken);
+
 
         var orders = await dbContext.Orders
             .Include(o => o.OrderItems)
