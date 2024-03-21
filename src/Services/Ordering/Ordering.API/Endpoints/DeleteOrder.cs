@@ -8,7 +8,7 @@ namespace Ordering.API.Endpoints;
 //- Returns a success or not found response
 
 // public record DeleteOrderRequest(Guid Id);
-public record DeleteOrderResponse(bool Succeeded);
+public record DeleteOrderResponse(bool IsSuccess);
 
 public class DeleteOrder : ICarterModule
 {
