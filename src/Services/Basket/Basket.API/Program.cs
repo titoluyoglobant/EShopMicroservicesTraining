@@ -49,7 +49,7 @@ builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(
     });
 
 // Async Communication services
-builder.Services.AddMessageBroker(builder.Configuration, assembly);
+builder.Services.AddMessageBroker(builder.Configuration);
 
 // Cross-Cutting Services
 builder.Services.AddExceptionHandler<CustomExceptionHandler>();
